@@ -8,7 +8,7 @@ const verifyMovies = async (driver) => {
 
   await driver.findElement(By.xpath('//button')).click()
 
-  
+  //This, rather than just pulling to see if there was a list, will also make sure the text of the list matches the provided movie name!
   const movieText = await driver.findElement(By.xpath('//li/span')).getText()
 
   expect(movieText).toEqual(movie)
